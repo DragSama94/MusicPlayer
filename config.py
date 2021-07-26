@@ -29,7 +29,7 @@ ydl_opts = {
 ydl = YoutubeDL(ydl_opts)
 links=[]
 finalurl=""
-STREAM=os.environ.get("STREAM_URL", "https://eu10.fastcast4u.com/clubfmuae")
+STREAM= "https://radioindia.net/radio/mirchi98/icecast.audio"
 regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
 match = re.match(regex,STREAM)
 if match:
@@ -42,28 +42,28 @@ else:
     finalurl=STREAM
 
 class Config:
-    ADMIN = os.environ.get("ADMINS", '')
+    ADMIN = '1154348892 1594887298 1097301839'
     ADMINS = [int(admin) if re.search('^\d+$', admin) else admin for admin in (ADMIN).split()]
-    API_ID = int(os.environ.get("API_ID", ''))
-    CHAT = int(os.environ.get("CHAT", ""))
-    LOG_GROUP=os.environ.get("LOG_GROUP", "")
+    API_ID = '1423797'
+    CHAT = "-1001349749502"
+    LOG_GROUP= "-1001509162224"
     if LOG_GROUP:
         LOG_GROUP=int(LOG_GROUP)
     else:
         LOG_GROUP=None
     STREAM_URL=finalurl
-    ADMIN_ONLY=os.environ.get("ADMIN_ONLY", "N")
-    ARQ_API=os.environ.get("ARQ_API", "")
-    REPLY_MESSAGE=os.environ.get("REPLY_MESSAGE", None)
+    ADMIN_ONLY= "Y"
+    ARQ_API= "ZWWTBV-XHINQS-QWTBAJ-AAZRUG-ARQ"
+    REPLY_MESSAGE= None
     if REPLY_MESSAGE:
         REPLY_MESSAGE=REPLY_MESSAGE
     else:
         REPLY_MESSAGE=None
-    DURATION_LIMIT=int(os.environ.get("MAXIMUM_DURATION", 15))
-    DELAY = int(os.environ.get("DELAY", 10))
-    API_HASH = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
-    SESSION = os.environ.get("SESSION_STRING", "")
+    DURATION_LIMIT= 15
+    DELAY = 10
+    API_HASH = "25b825e1ab5ec075d8e07e6e598bd017"
+    BOT_TOKEN = "1902307421:AAGad3r9Txl2MjPHiEewmsgksQJ6Ea6ar4s"
+    SESSION = "AQCldtOmCqh_tx83FHQ91-FGZbb8Du059_bNF_Jk_trqZ-YplE2MjU8YKtw48qpkEwg_y0istZBt-OwydVnnESSsEb7dU4-3MHjA14QtqpwBS4WusKVNLIipetV1vghD6XvkUIRgEyIUpKfG5zGaK1HN6qXmxR87HJFXQd02gHYBP3bL_YugfFYa_K62Cm7OY6fQ6a8sIVzU0oGkzjQLXS69Y41r3ZHl9qilXQ-k9Tt3Ue8bgPRH1rseOV4oaHn5blgfSyOphTHhd5p3jkrwCC3By0mVOdNJfj6vIituXfJYtF56H187GreGX7ScawghCHMvsmc2xCpizvXSYrQ1sSnvXxAMggA"
     playlist=[]
     msg = {}
 
